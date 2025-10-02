@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\userController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -21,3 +21,7 @@ Route::get('/', function () {
 
 Route::get('/profile/{Nama}/{NPM}/{Kelas}',[ProfileController::class,
 'profile']);
+
+Route::get('/user', [userController::class, 'index']);
+Route::get('/user/create', [userController::class, 'create'])->name("user.create");
+Route::post('/user', [userController::class, 'store'])->name('user.store');
