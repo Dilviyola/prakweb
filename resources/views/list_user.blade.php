@@ -12,44 +12,28 @@
         min-height: 100vh;
     }
 
-    /* Navbar */
+/* Navbar */
     .navbar {
         background-color: #c4e8f6; /* biru soft */
         padding: 15px 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     }
-
-    .navbar .logo {
-        font-size: 20px;
-        font-weight: bold;
-        color: #333;
-        text-decoration: none;
-    }
-
-    .navbar ul {
-        list-style: none;
+    .navbar h2 {
         margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 20px;
+        color: #333;
     }
-
-    .navbar ul li {
-        display: inline;
-    }
-
-    .navbar ul li a {
+    .navbar a {
+        margin-left: 20px;
         text-decoration: none;
         color: #333;
-        font-weight: 500;
-        transition: color 0.3s;
+        font-weight: bold;
+        transition: 0.3s;
     }
-
-    .navbar ul li a:hover {
-        color: #ff6b81; /* pink saat hover */
+    .navbar a:hover {
+        color: #ff91af;
     }
 
     h1 {
@@ -125,14 +109,15 @@
 </style>
 
 <!-- Navbar -->
-<nav class="navbar">
-    <a href="#" class="logo">MyApp</a>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Users</a></li>
-        <li><a href="#">About</a></li>
-    </ul>
-</nav>
+<div class="navbar">
+    <h2>Sistem Manajement Mahasiswa</h2>
+    <div>
+        <a href="/user">Home</a>
+        <a href="/user/create">Tambah Data</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+    </div>
+</div>
 
 <h1>Daftar Pengguna</h1>
 <table>
