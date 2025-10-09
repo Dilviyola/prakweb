@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('mata_kuliah', function (Blueprint $table) {
-    $table->string('nama_mk');
-    $table->string('sks')->unique();
-    $table->foreignId('kelas_id')->constrained();
-});
-
+        Schema::create('mata_kuliah', function (Blueprint $table) {
+            $table->uuid('id')->primary();;
+            $table->string('nama_mk'); // nama mata kuliah (varchar)
+            $table->integer('sks');    // jumlah sks (integer)
+            $table->timestamps();
+        });
     }
 
     /**
